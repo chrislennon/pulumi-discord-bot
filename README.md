@@ -1,5 +1,7 @@
 # Nodejs container using Pulumi - A Discord Bot
 
+Expanded from the [cloud-js-containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers) and other Pulumi [examples](https://github.com/pulumi/examples).
+
 ## Prerequisites
 
 This program requires the Pulumi CLI.  If you don't have it installed already,
@@ -15,7 +17,7 @@ Since this example uses Discord's bot system, you'll also need
 
 ## Running the Program
 
-After installing the CLI and cloning the repo, `cd` into the directory, and run these commands:
+After installing the CLI and cloning this repository, `cd` into the directory, and run these commands:
 
 1. Install NPM modules using `npm install` (or `yarn install` if you prefer Yarn).
 
@@ -31,6 +33,7 @@ After installing the CLI and cloning the repo, `cd` into the directory, and run 
     # Set the AWS region and service to deploy into:
     $ pulumi config set aws:region eu-west-1
     $ pulumi config set cloud-aws:useFargate true
+
     # Configure the bot token:
     $ pulumi config set authToken --secret
     ```
@@ -58,10 +61,4 @@ After installing the CLI and cloning the repo, `cd` into the directory, and run 
     $ pulumi destroy --yes
     $ pulumi stack rm --yes
     ```
-
-## Customising the bot
-
-The simplest way is to fork this repository and edit the files within `./bot`.
-- the `npm start` script in package.json by default refers to `./index.js`
-- if you change the directory of the bot be sure to update `pulumi set config subDirectory --plaintext`
 
