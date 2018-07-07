@@ -1,0 +1,3 @@
+name: pulumi-discord-bot
+description: A bot for Discord deployed using Pulumi
+runtime: nodejs

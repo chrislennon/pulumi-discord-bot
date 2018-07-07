@@ -1,3 +1,15 @@
+# Mac
+.DS_Store
+
+# Editor
+.vscode/*
+
+# Pulumi
+/.pulumi/
+
+# Pulumi Stack Config
+Pulumi.*.yaml
+
 # Logs
 logs
 *.log
