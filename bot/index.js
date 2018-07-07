@@ -15,6 +15,14 @@ bot.on('ready', () => {
 
 // Handle messages
 bot.on('message', message => {
+  if (message.author.bot) {
+    return;
+  }
+
+  if (message.system) {
+    return;
+  }
+
   try {
     message.reply("It Works!");
   } catch (e) {
